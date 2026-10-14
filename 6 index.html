@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: antiquewhite;">
     <h1>Olá, javascript</h1>
     <script>
         console.log ("primeiro comando js.");
@@ -24,12 +24,15 @@
         document.write("potência: " + (a ** b) + "<br>");
     </script>
     <hr>
-    <button onclick="info()">!CLIQUE AQUI!</button>"
+    <button style="color: chartreuse;" onclick="info()">CLIQUE AQUI</button>"
 
     <script>
         function info() {
             let nome = prompt("digite seu nome:");
             alert("bem vindo, " + nome + "!");
+
+            let idade = nome ("digite sua idade:");
+            alert("você tem" + idade "anos.")
         }
     </script>
 
