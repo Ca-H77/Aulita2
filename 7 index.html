@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let tentativa = 1; tentativa <= maxtentativas; tentativa++) { 
+        let usuarioInput = prompt(`[tentativa ${tentativa} de {maxtentativas}] digite o usuario:`);
+        let senhaInput = prompt(`[tentativa ${tentativa} de {maxtentativas}] digite a senha:`);
+        
+        if (usuarioInput === usuarioincorreto && senhaInput === senhacorreta) {
+            alert("loggin efetuado com sucesso! bem vindo.");
+            logado = true
+            break;
+        }
+        
+        if (tentativa < maxtentativas) {
+            alert(`Dados incorretos! Você ainda tem ${maxtentativas - tentativa} tentativa(s).` );
+        }
+    }
+
+    if(!logado) {
+        alert("numero de tentativas exedido! Sua conta foi bloquada por segurança.");
+    }
+        
+                
+    </script>
+</body>
+</html>
