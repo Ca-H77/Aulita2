@@ -7,13 +7,17 @@
 </head>
 <body>
     <script>
+    let maxtentativas = 3;
+    let usuariocorreto = "admin";
+    let senhacorreta = "1234";
+    let logado = false;
         for (let tentativa = 1; tentativa <= maxtentativas; tentativa++) { 
-        let usuarioInput = prompt(`[tentativa ${tentativa} de {maxtentativas}] digite o usuario:`);
-        let senhaInput = prompt(`[tentativa ${tentativa} de {maxtentativas}] digite a senha:`);
+        let usuarioInput = prompt(`[tentativa ${tentativa} de ${maxtentativas}] digite o usuario:`);
+        let senhaInput = prompt(`[tentativa ${tentativa} de ${maxtentativas}] digite a senha:`);
         
-        if (usuarioInput === usuarioincorreto && senhaInput === senhacorreta) {
+        if (usuarioInput === usuariocorreto && senhaInput === senhacorreta) {
             alert("loggin efetuado com sucesso! bem vindo.");
-            logado = true
+            logado = true;
             break;
         }
         
@@ -29,5 +33,6 @@
     <a href="index.html"
         class = "voltar-link">
         voltar
+    </a>
 </body>
 </html>
